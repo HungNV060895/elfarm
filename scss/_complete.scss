@@ -1,0 +1,51 @@
+@use "vars" as *;
+
+#page-complete {
+	.sec-thanks {
+		@include mq(xl-min) {
+			padding-bottom: 44px;
+		}
+	}
+	.thanks {
+		&-box {
+			background: url(../img/kiseki/item/order/checkout/complete/complete-bg-01.png) no-repeat left -5px bottom -5px, url(../img/kiseki/item/order/checkout/complete/complete-bg-02.png) no-repeat right -5px bottom -5px;
+			background-size: auto calc(100% + 10px);
+			background-color: white;
+			@include fts(16.5, 27.8);
+			letter-spacing: 0.05em;
+			@include mq(xl-min) {
+				padding: 67px 15px 62px;
+				margin-bottom: 142px;
+			}
+			@include mq {
+				@include fts(14, 31);
+				background-image: url(../img/kiseki/item/order/checkout/complete/complete-bg-01-sp.png), url(../img/kiseki/item/order/checkout/complete/complete-bg-02-sp.png);
+				background-repeat: no-repeat;
+				background-size: calc(100% + 6px) auto;
+				background-position: center top -3px, center bottom -3px;
+				@include mq(xs-min) {
+					padding: 23.9vw 23px 29vw;
+				}
+			}
+			&::before {
+				@include mq(md-min) {
+					width: 95px;
+					left: 50.2%;
+					top: calc(100% - 17px);
+				}
+			}
+			.c-ttl__02 {
+				@include mq(md-min) {
+					padding-bottom: 36px;
+					line-height: 1.3;
+					margin-bottom: 33px !important;
+				}
+				&:before {
+					@include mq(md-min) {
+						max-width: 661px;
+					}
+				}
+			}
+		}
+	}
+}

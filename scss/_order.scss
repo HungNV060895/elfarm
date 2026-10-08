@@ -1,0 +1,28 @@
+@use "vars" as *;
+
+.order {
+    &-box {
+        &__item {
+        }
+    }
+}
+
+.order-row{
+	.contact-item{
+		position: relative;
+	}
+	.wpcf7-form-control-wrap{
+		position: static;
+	}
+	.wpcf7-not-valid-tip{
+		position: absolute;
+		width: 100%;
+		display: block;
+		bottom: -30px;
+		left: 0;
+		z-index: 3;
+		@include mq(){
+			bottom: -20px;
+		}
+	}
+}

@@ -1,0 +1,322 @@
+@use "vars" as *;
+
+#page-kiseki{
+	.c-ttl__04{
+		letter-spacing: 0.19em;
+		@include mq(){
+			font-size: 2.2rem;
+			line-height: 1.5;
+		}
+	}
+	.sec-contact{
+		&:before{
+			display: none;
+		}
+	}
+}
+
+.sec-kiseki{
+	padding: 141px 0 0;
+	@include mq(){
+		padding: 50px 0 0;
+	}
+	.inner{
+		max-width: 615px;
+		position: relative;
+    	z-index: 1;
+		@include mq {
+			padding: 0 32px;
+		}
+	}
+	&:before{
+		content: "";
+		width: 25.8%;
+		max-width: 371px;
+		position: absolute;
+		top: -43px;
+		left: 0;
+		bottom: 0;
+		background: url("../img/kiseki/bf.png")no-repeat;
+		background-size: 100%;
+		z-index: 1;
+		@include mq(xl){
+			width: 15%;
+		}
+		@include mq(){
+			width: 77px;
+			height: 454px;
+			background: url(../img/kiseki/bf-02.png) no-repeat;
+			background-size: 100%;
+			top: 745px;
+		}
+
+	}
+	&:after{
+		content: "";
+		width: 26.1%;
+		max-width: 375px;
+		position: absolute;
+		top: -145px;
+		right: 0;
+		bottom: 0;
+		background: url("../img/kiseki/af.png")no-repeat;
+		background-size: 100%;
+		z-index: 1;
+		@include mq(xl){
+			width: 15%;
+		}
+		@include mq(){
+			width: 69px;
+			height: 427px;
+			background: url(../img/kiseki/af-02.png) no-repeat;
+			background-size: 100%;
+			top: -61px;
+		}
+	}
+	.icon-note{
+		top: 461px;
+		right: 18.6vw;
+		width: 100px;
+		@include mq(xl){
+			top: 500px;
+			right: 17vw;
+		}
+	}
+}
+.kiseki-heading{
+	text-align: center;
+	@include fts(16.5, 39.8);
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	margin-bottom: 34px;
+	@include mq(tb){
+		max-width: 600px;
+		margin: 0 auto 37px;
+	}
+	@include mq(){
+		@include fts(14,28);
+	}
+	p{
+		margin-bottom: 39px;
+		@include mq(){
+			margin-bottom: 27px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.kiseki-gallery{
+	max-width: 525px;
+	margin: 0 auto;
+	@include mq(){
+		padding: 0 2px;
+	}
+	.slick-arrow{
+		display: none !important;
+	}
+	&__item{
+		img{
+			border-radius: 23px;
+			@include mq(){
+				border-radius: 30px;
+				height: 46vw;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+.kiseki-kurobe{
+	position: relative;
+	background: #fff;
+	margin: 267px 0 42px;
+	@include mq(){
+		margin: 137px 0 42px;
+		padding: 68px 0 38px;
+		.kiseki-heading{
+			font-weight: bold;
+		}
+	}
+	&:before,&:after{
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 163px;
+		@include mq(){
+			height: 55px;
+		}
+	}
+	&:before{
+		bottom: calc(100% - 1px);
+		background: url("../img/kiseki/bg-01.png")no-repeat;
+		background-size: 100% 100%;
+		@include mq(md-min) {
+			bottom: calc(100% - 7px);
+		}
+		@include mq(){
+			background: url("../img/kiseki/bg-05.png")no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+	&:after{
+		top: calc(100% - 1px);
+		background: url("../img/kiseki/bg-02.png")no-repeat;
+		background-size: 100% 100%;
+		@include mq(md-min) {
+			top: calc(100% - 28px);
+		}
+		@include mq(){
+			background: url("../img/kiseki/bg-06.png")no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+	&__item{
+		width: 92px;
+		position: absolute;
+		top: -166px;
+		left: 41%;
+		@include mq(){
+			width: 75px;
+			top: -66px;
+			left: 40%;
+		}
+		&-02{
+			width: 82px;
+			position: absolute;
+			top: -119px;
+			right: 22px;
+		}
+	}
+}
+.kiseki-creating{
+	padding: 232px 0 32px;
+	@include mq(){
+		padding: 74px 0 83px;
+		position: relative;
+		&:after{
+			content: "";
+			width: 56px;
+			height: 237px;
+			background: url(../img/kiseki/af-03.png) no-repeat;
+			background-size: 100%;
+			position: absolute;
+			top: -106px;
+			right: 0;
+			z-index: 1;
+		}
+		&:before{
+			content: "";
+			width: 67px;
+			height: 220px;
+			background: url(../img/kiseki/bf-03.png) no-repeat;
+			background-size: 100%;
+			position: absolute;
+			bottom: -130px;
+			left: 0;
+			z-index: 1;
+		}
+		.kiseki-heading{
+			font-weight: bold;
+		}
+	}
+}
+.kiseki-show{
+	background: url(../img/kiseki/bg-03.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+	padding: 239px 0 157px;
+	@include mq(){
+		background: url(../img/kiseki/bg-07.png) no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+		padding: 119px 0 142px;
+		position: relative;
+		&:before,&:after{
+			content: "";
+			position: absolute;
+		}
+		&:before{
+			width: 198px;
+			height: 481px;
+			background: url(../img/kiseki/bf-04.png) no-repeat;
+			background-size: 100%;
+			bottom: -161px;
+			left: 0;
+		}
+		&:after{
+			width: 92px;
+			height: 175px;
+			background: url(../img/kiseki/af-04.png) no-repeat;
+			background-size: 100%;
+			bottom: -43px;
+			right: 0;
+		}
+	}
+	.inner{
+		@include flex(0,0,wrap);
+		max-width: 644px;
+	}
+	.c-ttl__04{
+		width: 100%;
+	}
+	&__img{
+		width: 42%;
+		@include mq(){
+			width: 69%;
+			order: 3;
+			margin: 0 auto 34px;
+		}
+	}
+	&__ct{
+		width: 58%;
+		padding: 13px 0 0 35px;
+		letter-spacing: 0.14em;
+		@include fts(15, 33.8);
+		font-weight: 700;
+		@include mq(){
+			width: 100%;
+			padding: 0;
+			text-align: center;
+			order: 1;
+			@include fts(14,28);
+			letter-spacing: 0.12em;
+			margin-bottom: 36px;
+		}
+		p{
+			@include mq(md-min){
+				margin-bottom: 45px;
+			}
+		}
+		&-more{
+			@include flex(end,start,wrap);
+			padding: 0 20px 0 0;
+			@include mq(){
+				width: 100%;
+				order: 4;
+			}
+			&-icon{
+				display: block;
+				width: 91px;
+				@include mq(){
+					width: 75px;
+					margin: 0 5px 0 0;
+				}
+			}
+			.c-btn__02{
+				top: 2px;
+			}
+		}
+	}
+}
+.products-box{
+	border: 2px solid $red;
+	border-radius: 20px;
+	overflow: hidden;
+	@include mq(){
+		border: 1px solid $red;
+		border-radius: 15px;
+
+	}
+}

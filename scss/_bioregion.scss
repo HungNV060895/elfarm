@@ -1,0 +1,235 @@
+@use "vars" as *;
+
+#page-bioregion{
+	.c-ttl__04{
+		letter-spacing: 0.19em;
+		@include mq(){
+			font-size: 2.2rem;
+			line-height: 1.5;
+		}
+	}
+	.sec-contact{
+		&:before{
+			display: none;
+		}
+	}
+	@include mq(){
+		.mv-page{
+			padding-bottom: 63px;
+		}
+	}
+	.process-block__item-02{
+		@include mq{
+			width: 97px;
+		}
+	}
+}
+.sec-bioregion{
+	padding: 114px 0 104px;
+	@include mq(){
+		padding: 48px 0 0;
+		& + .sec-news-other--default{
+			padding-top: 21px;
+			padding-bottom: 0;
+			margin: -38px 0 0;
+			&:before{
+				background: url(../img/bioregion/bg-07.png) no-repeat;
+				background-size: 100% 100%;
+			}
+		}
+	}
+	.inner{
+		position: relative;
+		z-index: 2;
+	}
+	&:before{
+		content: "";
+		width: 25.8%;
+		max-width: 371px;
+		position: absolute;
+		top: -43px;
+		left: 0;
+		bottom: 0;
+		background: url("../img/bioregion/bf.png")no-repeat;
+		background-size: 100%;
+		z-index: 1;
+		@include mq(xl){
+			width: 13%;
+			background: url("../img/bioregion/bf.png") repeat-y;
+			background-size: 100%;
+		}
+		@include mq(){
+			width: 77px;
+			height: 454px;
+			background: url(../img/bioregion/bf-02.png) no-repeat;
+			background-size: 100%;
+			top: 745px;
+		}
+
+	}
+	&:after{
+		content: "";
+		width: 26.1%;
+		max-width: 375px;
+		position: absolute;
+		top: -146px;
+		right: 0;
+		bottom: 0;
+		background: url("../img/bioregion/af.png")no-repeat;
+		background-size: 100%;
+		z-index: 1;
+		@include mq(xl){
+			width: 13%;
+			background: url("../img/bioregion/af.png") repeat-y;
+			background-size: 100%;
+		}
+		@include mq(){
+			width: 69px;
+			height: 427px;
+			background: url(../img/bioregion/af-02.png) no-repeat;
+			background-size: 100%;
+			top: -62px;
+			right: -11px;
+		}
+	}
+}
+.icon-note{
+	position: absolute;
+	top: 461px;
+	right: 18.6vw;
+	width: 100px;
+	z-index: 3;
+}
+
+.bioregion-heading{
+	text-align: center;
+	@include fts(16.5,39.8);
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	margin-bottom: 34px;
+	@include mq(tb){
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	@include mq(){
+		@include fts(14,28);
+		strong{
+			@include fts(13,22);
+			display: block;
+		}
+	}
+	p{
+		margin-bottom: 39px;
+		@include mq(){
+			margin-bottom: 27px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__img{
+		max-width: 540px;
+		margin: 44px auto 0;
+		@include mq(){
+			padding: 0 0 0 7px;
+		}
+		&-02{
+			max-width: 570px;
+			margin: 0 auto 8px;
+			@include mq(){
+				margin: 0 -21px 18px;
+			}
+		}
+	}
+}
+.bioregion-show{
+	position: relative;
+	background: #fff;
+	margin: 263px 0 28px;
+    padding: 4px 0 18px;
+	@include mq(){
+		margin: 222px 0 42px;
+		padding: 74px 0 85px;
+		.bioregion-heading{
+			padding: 0 10px;
+		}
+		.process-block__item-03{
+			bottom: 17px;
+		}
+		.process-block__item-04{
+			bottom: -135px;
+		}
+	}
+	&:before,&:after{
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 163px;
+		@include mq(){
+			height: 55px;
+		}
+	}
+	&:before{
+		bottom: calc(100% - 1px);
+		background: url("../img/bioregion/bg-01.png")no-repeat;
+		background-size: 100% 100%;
+		@include mq(){
+			background: url("../img/bioregion/bg-05.png")no-repeat;
+			background-size: 100% 100%;
+			height: 106px;
+		}
+	}
+	&:after{
+		top: calc(100% - 1px);
+		background: url("../img/bioregion/bg-02.png")no-repeat;
+		background-size: 100% 100%;
+		@include mq(){
+			background: url("../img/bioregion/bg-06.png")no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+	.c-ttl__04 {
+		small {
+			@include mq(md-min) {
+				margin: 0 0 2px;
+			}
+		}
+	}
+	&__item{
+		width: 91px;
+		position: absolute;
+		top: -194px;
+		left: 41%;
+		@include mq(){
+			width: 75px;
+			top: -66px;
+			left: 40%;
+		}
+		&-02{
+			width: 126px;
+			position: absolute;
+			top: -158px;
+			right: 0;
+		}
+		&-03{
+			width: 80px;
+			position: absolute;
+			bottom: -23px;
+			left: 0;
+		}
+		&-04{
+			width: 94px;
+			position: absolute;
+			bottom: -154px;
+			right: 0;
+		}
+	}
+}
+
+.sec-news-other--default{
+	padding-bottom: 0;
+	@include mq(tb-min){
+		padding-bottom: 163px;
+	}
+}

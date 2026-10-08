@@ -1,0 +1,550 @@
+@use "vars" as *;
+
+#page-biomass{
+	.c-ttl__04{
+		letter-spacing: 0.19em;
+		@include mq(){
+			font-size: 2.2rem;
+			line-height: 1.5;
+		}
+	}
+	.sec-contact{
+		&:before{
+			display: none;
+		}
+	}
+	@include mq(){
+		.mv-page{
+			padding-bottom: 63px;
+		}
+	}
+}
+.sec-biomass{
+	padding: 129px 0 0;
+	@include mq(){
+		padding: 48px 0 0;
+		.kiseki-gallery__item img {
+			height: 43vw;
+		}
+	}
+	.inner{
+		position: relative;
+		z-index: 2;
+		@include mq(){
+			padding: 0 35px;
+		}
+	}
+	&:before{
+		content: "";
+		width: 25.8%;
+		max-width: 371px;
+		position: absolute;
+		top: -43px;
+		left: 0;
+		bottom: 0;
+		background: url("../img/biomass/bf.png")no-repeat;
+		background-size: 100%;
+		z-index: 1;
+		@include mq(xl){
+			width: 13%;
+			background: url("../img/biomass/bf.png") repeat-y;
+			background-size: 100%;
+		}
+		@include mq(){
+			width: 79px;
+			height: 454px;
+			background: url(../img/biomass/bf-02.png) no-repeat;
+			background-size: 100%;
+			top: 614px;
+		}
+
+	}
+	&:after{
+		content: "";
+		width: 26.1%;
+		max-width: 375px;
+		position: absolute;
+		top: -146px;
+		right: 0;
+		bottom: 0;
+		background: url("../img/biomass/af.png")no-repeat;
+		background-size: 100%;
+		z-index: 1;
+		@include mq(xl){
+			width: 13%;
+			background: url("../img/biomass/af.png" ) repeat-y;
+			background-size: 100%;
+		}
+		@include mq(){
+			width: 69px;
+			height: 427px;
+			background: url(../img/biomass/af-02.png) no-repeat;
+			background-size: 100%;
+			top: -62px;
+			right: -11px;
+		}
+	}
+	.kiseki-kurobe {
+		margin: 268px 0 0;
+    	padding: 0 0 34px;
+		&::before {
+			@include mq(md-min) {
+				bottom: calc(100% - 16px);
+			}
+		}
+		&:after{
+			background: white;
+			height: 300px;
+		}
+		@include mq(){
+			margin: 164px 0 0;
+			padding: 57px 0 85px;
+			.process-block__item-02 {
+				width: 97px;
+				top: -146px;
+				right: 0;
+			}
+			.process-block__item-04 {
+				width: 116px;
+				bottom: -123px;
+				z-index: 2;
+			}
+		}
+		&__item {
+			@include mq(md-min) {
+				top: -170px;
+			}
+		}
+		.kiseki-heading {
+			@include mq(md-min) {
+				margin-top: -10px;
+			}
+		}
+	}
+}
+
+.biomass-elfarm{
+	&__ttl{
+		display: block;
+		text-align: center;
+		@include font-size(20.25);
+		font-weight: bold;
+		margin-bottom: 30px;
+		animation: animation01 1s infinite;
+		transition: all .3s ease;
+		@include mq(){
+			font-size: 1.6rem;
+			margin-bottom: 27px;
+		}
+		span{
+			display: inline-block;
+			position: relative;
+			background: #fdb35f;
+			padding: 10px 21px;
+			letter-spacing: 3px;
+			border-radius: 70px;
+			@include mq(){
+				padding: 10px 12px;
+				letter-spacing: 1.5px;
+			}
+			&:after{
+				content: "";
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 7px 5px 0;
+				border-color: #FDB35F transparent transparent transparent;
+				position: absolute;
+				top: calc(100% - 1px);
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				@include mq(){
+					border-width: 13px 10px 0;
+				}
+			}
+		}
+	}
+	&__list{
+		@include flex(center,start,wrap);
+		max-width: 785px;
+    	margin: 0 auto 65px;
+		@include mq(){
+			padding: 0 0 0 10px;
+			margin-bottom: 51px;
+		}
+		&-item{
+			@include mq(md-min){
+				width: 25.5%;
+				padding: 38px 0 0;
+				&:nth-child(2){
+					width: 39%;
+					margin: 0 20px;
+					padding: 0;
+					.biomass-elfarm__list {
+						&-img {
+							margin: 0 0 -5px;
+							padding: 0 5px 0 13px;
+						}
+						&-ct {
+							dl {
+								dt {
+									color: #0C6E37;
+								}
+							}
+						}
+					}
+				}
+				&:nth-child(3){
+					padding: 56px 0 0;
+					.biomass-elfarm__list-img {
+						padding: 0 6px 0 5px;
+        				margin: 0 0 16px;
+					}
+				}
+			}
+			@include mq(){
+				@include flex(0,0,wrap);
+				margin-bottom: 33px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				&:nth-child(2){
+					order: 1;
+					margin-bottom: 27px;
+					.biomass-elfarm__list{
+						&-img{
+							width: 100%;
+							padding: 0 23px 0 18px;
+							margin-bottom: -4px;
+						}
+						&-ct{
+							width: 100%;
+							max-width: 275px;
+							margin: 0 auto;
+							padding: 0;
+							dl{
+								@include flex(0,0,wrap);
+								margin-bottom: 4px;
+								dt{
+									width: 86px;
+									text-align: right;
+									color: #0C6E37;
+								}
+								dd{
+									width: calc(100% - 86px);
+									font-weight: 500;
+									padding: 0 0 0 15px;
+								}
+							}
+						}
+					}
+				}
+				&:nth-child(1){
+					order: 2;
+				}
+				&:nth-child(3){
+					order: 3;
+					.biomass-elfarm__list-ct{
+						padding-top: 0;
+					}
+					.biomass-elfarm__list-img{
+						padding: 0 7px;
+					}
+				}
+			}
+		}
+		&-img{
+			margin: 0px -6px 29px 0;
+    		padding: 0 0 0 9px;
+			@include mq(){
+				margin: 0;
+				padding: 0;
+				width: 50%;
+			}
+		}
+		&-ct{
+			@include mq(){
+				width: 50%;
+				padding: 17px 0 0 26px;
+			}
+			dl{
+				text-align: center;
+				@include font-size(16.5);
+				margin-bottom: 17px;
+				@include mq(){
+					@include font-size(16);
+					text-align: left;
+					margin-bottom: 13px;
+				}
+				&:last-child{
+					margin: 0;
+				}
+				dt{
+					font-weight: bold;
+					margin-bottom: 1px;
+				}
+				dd{
+					@include mq(md-min){
+						color: black;
+					}
+				}
+			}
+			&-note{
+				text-align: center;
+				font-size: 1.6rem;
+				font-weight: 700;
+				display: block;
+				padding: 40px 0 0;
+			}
+		}
+	}
+	&__note{
+		max-width: 615px;
+		margin: 0 auto;
+		background: #e8f4e7;
+		padding: 49px 68px 41px;
+		@include fts(15, 33.8);
+		font-weight: 700;
+		position: relative;
+		letter-spacing: 0.14em;
+		border-radius: 200px;
+		@include mq(){
+			@include fts(13,24);
+			border-radius: 30px;
+			padding: 26px 31px;
+		}
+		&:before{
+			content: "";
+			width: 108px;
+    		height: 109px;
+			background: url(../img/biomass/icon-02.png) no-repeat;
+			background-size: 100%;
+			position: absolute;
+			bottom: -46px;
+    		left: -32px;
+			animation: animation02 2s infinite;
+			transform: rotate(20deg);
+			@include mq(){
+				width: 92px;
+				bottom: -127px;
+				left: 16px;
+			}
+		}
+		&:after{
+			content: "";
+			width: 42px;
+			height: 43px;
+			background: url(../img/biomass/icon-03.png) no-repeat;
+			background-size: 100%;
+			position: absolute;
+			bottom: -27px;
+			left: 77px;
+			@include mq(){
+				bottom: -29px;
+				left: 127px;
+			}
+		}
+	}
+	@include mq{
+		&__deco{
+			position: absolute;
+			top: 34%;
+			right: 0;
+		}
+	}
+}
+
+.biomass-galerry{
+	position: relative;
+	z-index: 2;
+	@include mq(){
+		margin: 5px 0 0 0;
+	}
+	&__item{
+		position: relative;
+		img{
+			width: 100%;
+			min-height: 700px;
+			@include ob;
+			@include mq(){
+				min-height: 10px;
+			}
+		}
+	}
+	&__ct{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 250px 30px 146px;
+		margin: 0 auto;
+		max-width: 1286px;
+		@include fts(37,80);
+		font-weight: bold;
+		color: #FFFFFF;
+		letter-spacing: 0.29em;
+		text-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+		@include flex(center,center,wrap);
+		@include mq(){
+			@include fts(32,46);
+			padding: 170px 30px 94px;
+		}
+	}
+}
+
+.sec-biomass-lives{
+	background: url(../img/biomass/bg-01.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: top;
+	margin: -151px 0 0;
+    padding: 279px 0 206px;
+	z-index: 2;
+	@include mq(){
+		margin: -58px 0 0;
+		padding: 150px 0 141px;
+		background: #fff6e0;
+	}
+	.inner{
+		max-width: 750px;
+		@include mq {
+			padding: 0 35px;
+		}
+	}
+	.c-ttl__04{
+		line-height: calc(48.8 / 30);
+		@include mq {
+			font-size: 2.4rem !important;
+			line-height: 1.3 !important;
+		}
+	}
+}
+.biomass-lives{
+	@include fts(15, 33.8);
+	font-weight: bold;
+	max-width: 705px;
+	margin: 0 auto 115px;
+	@include mq(){
+		@include fts(14,28);
+		margin-bottom: 42px;
+	}
+	small{
+		@include font-size(18);
+		@include mq(){
+			@include font-size(14);
+		}
+	}
+	&__item{
+		@include flex(0,center,wrap);
+		margin-bottom: 66px;
+		@include mq(){
+			margin-bottom: 50px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&:nth-child(2n){
+			@include mq(md-min){
+				.biomass-lives{
+					&__img{
+						order: 1;
+						img {
+							margin-bottom: 7px;
+						}
+					}
+					&__ct{
+						order: 2;
+						padding: 0 0 4px 46px;
+					}
+				}
+			}
+			@include mq(){
+				.biomass-lives{
+					&__ct{
+						color: $green;
+					}
+				}
+			}
+		}
+	}
+	&__img{
+		width: 47.8%;
+		text-align: center;
+		line-height: 1.2;
+		position: relative;
+		@include fts(16.5,39.8);
+		@include mq(){
+			width: 100%;
+			@include font-size(14);
+		}
+		img{
+			width: 100%;
+			border-radius: 23px;
+			margin-bottom: 12px;
+		}
+		p{
+			color: $green;
+			letter-spacing: .12em;
+			@include fts(16.5,19.5);
+			@include mq(){
+				@include font-size(14);
+			}
+			@include mq(md-min){
+				position: absolute;
+				top: 99%;
+				left: 0;
+				right: 0;
+			}
+			small {
+				@include fts(13.5, 19.5);
+				letter-spacing: .12em;
+				@include mq {
+					@include font-size(12);
+				}
+			}
+		}
+	}
+	&__ct{
+		flex: 1;
+		letter-spacing: 0.14em;
+		padding: 0 34px 20px 0;
+		@include mq(){
+			width: 100%;
+			padding: 0;
+			margin-bottom: 14px;
+		}
+	}
+	&__note{
+		color: $green;
+		@include fts(16.5,33.8);
+		font-weight: 500;
+		letter-spacing: 0.12em;
+		text-align: center;
+		@include mq(){
+			@include fts(15,26);
+			text-align: left;
+		}
+	}
+}
+
+@keyframes animation01 {
+	0% {
+		transform: translateY(-10px);
+	}
+	50% {
+		transform: translateY(10px);
+	}
+	100%{
+		transform: translateY(-10px);
+	}
+}
+@keyframes animation02 {
+	50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(20deg);
+    }
+}

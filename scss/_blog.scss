@@ -1,0 +1,190 @@
+@use "vars" as *;
+
+#page-blog,.page-blog {
+    .sec-coverage {
+        background: #fff6e0;
+        margin-top: 0;
+        @include mq(md-min) {
+            padding: 187px 0 184px;
+        }
+        @include mq {
+            padding: 20vw 0 30vw;
+        }
+        &::before {
+            display: none;
+        }
+        &__img {
+            &--first {
+                bottom: -0.45%;
+                left: 0.3%;
+            }
+            &--second {
+                top: -5.4%;
+                right: 2.3%;
+            }
+        }
+    }
+	@include mq(md-min){
+		.sec-sustainable{
+			padding-top: 176px;
+		}
+		.sec-news {
+			padding: 0 0 185px;
+			&::before {
+				bottom: 0;
+			}
+		}
+	}
+}
+
+.sec-sustainable {
+    background: url(../img/blog/coverage-bg.png) no-repeat center / cover;
+    position: relative;
+    text-align: center;
+    margin: -68px 0 0;
+	padding: 167px 0 259px;
+    @include mq {
+        margin-top: 0;
+		padding: 50px 0 80px;
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+    }
+    &::before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        aspect-ratio: 144 / 15;
+        background: url(../img/blog/coverage-bf.png) no-repeat center / cover;
+    }
+    &::after {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        aspect-ratio: 1440 / 131;
+        background: url(../img/blog/coverage-af.png) no-repeat center / cover;
+    }
+    &--bfWhite {
+        &::before {
+            background: url(../img/blog/coverage-bf-white.png) no-repeat center / cover;
+        }
+    }
+    .inner {
+        position: relative;
+        z-index: 3;
+    }
+	.c-ttl__02{
+		@include mq(md-min){
+			margin-bottom: 31px;
+		}
+	}
+}
+
+.sustainable {
+    &-img {
+        position: absolute;
+        pointer-events: none;
+        z-index: 1;
+		top: 6px;
+		right: 9.5%;
+		width: 102px;
+        @include mq {
+            width: 80px;
+            right: 15px;
+            top: 0;
+        }
+    }
+    &-list {
+        max-width: 948px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 48px;
+        font-weight: bold;
+        @include fts(13.5, 21);
+        letter-spacing: 0.14em;
+        text-align: center;
+        @include mq {
+            @include font-size(13);
+            gap: 0 15px;
+        }
+        @include mq(sm) {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        &__item {
+
+        }
+        &__link {
+            @include flex(center,center);
+			min-height: 280px;
+            position: relative;
+            z-index: 1;
+            color: #71430F;
+            transition: .3s color ease;
+			@include mq(xl){
+				min-height: 280px;
+			}
+            @include hover {
+                opacity: 1;
+                color: #FFF6E0;
+                .sustainable-list {
+                    &__ttl {
+                        color: #FFF6E0;
+                    }
+                    &__img {
+                        img {
+                            &:last-child {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__txt {
+            margin: -11px 0 19px;
+            @include mq {
+                margin: 0 0 15px;
+            }
+        }
+        &__ttl {
+            @include fts(21, 30);
+            color: #0C6E37;
+            transition: .3s color ease;
+            letter-spacing: 0.05em;
+            @include mq(xl) {
+                @include font-size(18);
+            }
+            @include mq {
+                @include font-size(16);
+            }
+        }
+        &__img {
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform: translateY(-50%);
+            img {
+                display: block;
+                width: 100%;
+                &:last-child {
+                    opacity: 0;
+                    transition: .3s opacity ease;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

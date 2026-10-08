@@ -1,0 +1,138 @@
+@use "vars" as *;
+
+.sec-detail {
+	padding: 141px 0 156px;
+	@include mq {
+		padding: 100px 0 0;
+	}
+	+.c-bf__03 {
+		&::before {
+			display: none;
+		}
+	}
+}
+
+.detail {
+	&-date {
+		@include font-size(15);
+		line-height: 1.4;
+		letter-spacing: 0.1em;
+		border-bottom: 2px solid #71430f;
+		margin-bottom: 89px;
+		padding: 0 0 26px;
+		@include mq {
+			@include font-size(13);
+			padding-bottom: 15px;
+			margin-bottom: 50px;
+			border-width: 1px;
+		}
+	}
+	&-img {
+		margin-bottom: 75px;
+		@include mq {
+			margin-bottom: 35px;
+		}
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	&-desc {
+		@include fts(22, 53);
+		font-weight: 500;
+		border-bottom: 1px solid #71430F;
+		margin-bottom: 99px;
+		padding: 0 0 88px;
+		letter-spacing: 0.05em;
+		@include mq(xl) {
+			@include font-size(18);
+		}
+		@include mq {
+			@include font-size(14);
+			padding: 0 0 30px;
+			margin-bottom: 50px;
+		}
+	}
+	&-ct {
+		@include fts(16.5, 39.8);
+		letter-spacing: 0.05em;
+		margin-bottom: 140px;
+		font-weight: 500;
+		@include mq(xl) {
+			margin-bottom: 80px;
+		}
+		@include mq {
+			@include fts(14, 26);
+			margin-bottom: 60px;
+		}
+		strong{
+			font-weight: bold;
+		}
+		p {
+			font-weight: 500;
+			&:not(:last-child) {
+				margin-bottom: 50px;
+				@include mq {
+					margin-bottom: 25px;
+				}
+			}
+		}
+		img {
+			display: block;
+			width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 50px;
+				@include mq {
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+	&-btns {
+		border-top: 2px solid #71430f;
+		border-bottom: 2px solid #71430f;
+		padding: 67px 0;
+		@include flex(center, center);
+		gap: 35px;
+		max-width: 817px;
+		margin: 0 auto;
+		width: 100%;
+		@include mq {
+			width: calc(100% - 40px);
+			margin: 0 auto;
+			padding: 39px 0;
+			border-width: 1px;
+			flex-direction: column-reverse;
+			gap: 20px;
+		}
+		> * {
+			margin: 0;
+			width: calc(50% - 25px);
+			max-width: 290px;
+			height: 75px;
+			@include mq(md-min){
+				@include font-size(22.5);
+			}
+			@include mq {
+				width: 100%;
+				max-width: 237px;
+			}
+		}
+	}
+}
+
+#page-list_0116{
+	@include mq(md-min){
+		.mv-page__txt{
+			margin-bottom: 0;
+		}
+	}
+}
+
+#page-list_detail{
+	@include mq(md-min){
+		.c-btn__03{
+			max-width: 235px;
+		}
+	}
+}
